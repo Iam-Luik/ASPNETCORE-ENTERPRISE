@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <UserSecretsId>35f9e151-c52e-4824-9d6f-7837feab1705</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -22,12 +23,13 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.0" />
         <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Configuration" />
+      <Content Remove="secrets.json" />
     </ItemGroup>
 
 </Project>
